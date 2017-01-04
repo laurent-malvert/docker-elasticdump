@@ -2,7 +2,7 @@
 
 Provides a `Dockerfile` to build a docker image allowing you to build
 your own images to automate Elasticsearch import/export operations
-using [elasticdump][2] and [jq][2].
+using [elasticdump][1] and [jq][2].
 
 ## Why?
 
