@@ -1,0 +1,13 @@
+# self
+Dockerfile
+.dockerignore
+
+# hidden and backup resources
+.*
+*~
+
+# documentation
+README.md
+LICENSE
+
+
