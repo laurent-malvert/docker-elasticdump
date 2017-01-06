@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:latest
 
 MAINTAINER Laurent Malvert <laurent.malvert@gmail.com>
 
@@ -27,9 +27,9 @@ RUN npm install -g elasticdump
 
 WORKDIR /opt
 
-RUN mkdir jq                                                              \
-      && wget -O ./jq/jq http://stedolan.github.io/jq/download/linux64/jq \
-      && chmod +x ./jq/jq                                                 \
-      && ln -s /opt/jq/jq /usr/local/bin
+RUN mkdir jq                                                            \
+      && wget -O jq/jq http://stedolan.github.io/jq/download/linux64/jq \
+      && chmod +x jq/jq                                                 \
+      && ln -s jq/jq /usr/local/bin
 
 ENTRYPOINT [ "/usr/local/bin/elasticdump" ]
