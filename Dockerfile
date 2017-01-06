@@ -30,6 +30,6 @@ WORKDIR /opt
 RUN mkdir jq                                                            \
       && wget -O jq/jq http://stedolan.github.io/jq/download/linux64/jq \
       && chmod +x jq/jq                                                 \
-      && ln -s jq/jq /usr/local/bin
+      && ln -s /opt/jq/jq /usr/local/bin
 
 ENTRYPOINT [ "/usr/local/bin/elasticdump" ]
